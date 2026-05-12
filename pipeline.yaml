@@ -53,7 +53,7 @@ spec:
         kind: ClusterTask
       params:
       - name: IMAGE
-        value: "us.icr.io/$(context.pipelineRun.name)/$(params.app-name)"
+        value: "us.icr.io/$(context.pipelineRun.namespace)/$(params.app-name)"
       runAfter:
         - tests  
     - name: init
